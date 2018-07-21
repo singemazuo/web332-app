@@ -251,11 +251,12 @@ app.post("/employees/add", upload.array(), (req, res) => {
     dataObjs.addEmployee(req.body)
     .then( (data) => {
         console.log(data);
+        res.redirect("/employees");
     })
     .catch( (data) => {
         console.log(data);
+        res.redirect("/employees");
     });
-    res.redirect("/employees");
 });
 
 app.get("/employees/delete/:empNum", (req, res) => {
@@ -301,11 +302,12 @@ app.post("/departments/add", upload.array(), (req, res) => {
     dataObjs.addDepartment(req.body)
     .then( (data) => {
         console.log(data);
+        res.redirect("/departments");
     })
     .catch( (data) => {
         console.log(data);
+        res.redirect("/departments");
     })
-    res.redirect("/departments");
 })
 
 app.post("/departments/update", (req, res) => {

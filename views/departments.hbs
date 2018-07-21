@@ -13,10 +13,10 @@
                     </tr>   
                 </thead>
                 <tbody>
-                    {{#each Departments}}
+                    {{#each depts}}
                         <tr>
-                            <td><a href = "/employees?department={{departmentId}}">{{departmentId}}</a></td>
-                            <td><a href = "/department/{{departmentId}}">{{departmentName}}</a></td>
+                            <td><a href = "/employees?department={{dataValues.departmentId}}">{{dataValues.departmentId}}</a></td>
+                            <td><a href = "/department/{{dataValues.departmentId}}">{{dataValues.departmentName}}</a></td>
                         </tr>
                     {{/each}}
                 </tbody>
